@@ -142,6 +142,12 @@ jobs:
 
           # Clone repositories using the branch names
           git clone https://github.com/ShirkNeko/susfs4ksu.git -b "$SUSFS_BRANCH"
+          # if [ "${{ inputs.kernel_version }}" == "6.1" ]; then
+          #   echo "Reverting patch..."
+          #   cd susfs4ksu
+          #   git checkout 0e19a05277d28182c7b653580117145c53e69e92
+          #   cd ..
+          # fi
           git clone https://github.com/ShirkNeko/SukiSU_patch.git
           git clone https://github.com/MiRinChan/AnyKernel3.git
 
